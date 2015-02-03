@@ -1,0 +1,15 @@
+[user]
+name = Ivan Kliuk
+email = ivan.kliuk@gmail.com
+
+[core]
+editor = vim
+
+[gitreview]
+username = ivan
+
+[color]
+ui = true
+
+[diff]
+tool = vimdiff
