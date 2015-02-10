@@ -67,3 +67,6 @@ alias pjson='python -m json.tool'
 
 # refresh shell
 alias reload='source ${HOME}/.bashrc'
+
+# remove all .pyc files
+alias rm_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
