@@ -3,3 +3,6 @@
 
 # ctags
 tags
+
+# Python byte code files
+*.pyc
