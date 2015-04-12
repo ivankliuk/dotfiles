@@ -8,5 +8,6 @@ tags
 *.pyc
 __pycache__
 
-# .egg-info directories
+# .egg-info and dist directories
 *.egg-info
+dist
