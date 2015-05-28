@@ -60,7 +60,7 @@ alias a='ls -la | grep "^d" && ls -la | grep -v "^d"'
 alias ..='cd ..'
 
 # grep with color and ignore case
-alias grep='grep --color=auto -i'
+alias grep='grep --color=auto'
 
 # JSON prettifier (intended for usage in pipes)
 alias pjson='python -m json.tool'
