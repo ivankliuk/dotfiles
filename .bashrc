@@ -70,3 +70,20 @@ alias reload='source ${HOME}/.bashrc'
 
 # remove all .pyc files
 alias rm_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
+
+
+###########
+# HISTORY #
+###########
+
+# History size
+HISTSIZE=100000
+
+# When the shell exits, append to the history rather than overwrite it
+shopt -s histappend
+
+# Append command to the history and reread it from file
+export PROMPT_COMMAND="history -a; history -c; history -r; ${PROMPT_COMMAND}"
+
+# Don't put duplicate lines in the history
+export HISTCONTROL=ignoredups:erasedups 
