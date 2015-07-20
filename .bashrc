@@ -72,8 +72,8 @@ alias reload='source ${HOME}/.bashrc'
 alias rm_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
 
 
-###########
-# HISTORY #
+###########		
+# HISTORY #		
 ###########
 
 # History size
@@ -82,8 +82,8 @@ HISTSIZE=100000
 # When the shell exits, append to the history rather than overwrite it
 shopt -s histappend
 
-# Append command to the history and reread it from file
-export PROMPT_COMMAND="history -a; history -c; history -r; ${PROMPT_COMMAND}"
+# Append command to the history
+export PROMPT_COMMAND="history -a"
 
-# Don't put duplicate lines in the history
-export HISTCONTROL=ignoredups:erasedups 
+# Erase duplicate lines in the history and don't save commands starting with whitespace
+export HISTCONTROL=erasedups:ignorespace
