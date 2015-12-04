@@ -71,6 +71,9 @@ alias reload='source ${HOME}/.bashrc'
 # remove all .pyc files
 alias rm_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
 
+# PDB session capture when running py.test
+alias py.test='py.test --pdb --capture=no'
+
 
 ###########		
 # HISTORY #		
