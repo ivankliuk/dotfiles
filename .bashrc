@@ -74,6 +74,8 @@ alias rm_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
 # PDB session capture when running py.test
 alias py.test='py.test --pdb --capture=no'
 
+# Docker initialization for Mac OS
+alias docker-init='bash --login /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh'
 
 ###########		
 # HISTORY #		
