@@ -48,7 +48,7 @@ alias mkdir='mkdir -p'
 alias tmux='tmux attach || tmux new'
 
 # Run mtr under sudo
-# alias mtr='sudo mtr' # Uncomment this line on Mac OS X
+# alias mtr='sudo /usr/local/sbin/mtr' # Uncomment this line on Mac OS X
 
 # Quick jump to development environment
 alias ff='ssh fuel-fake'
