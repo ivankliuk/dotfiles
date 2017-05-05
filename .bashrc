@@ -47,6 +47,9 @@ alias ll='ls -lhaG'
 alias mkdir='mkdir -p'
 alias tmux='tmux attach || tmux new'
 
+# Colorized Scala REPL
+alias scala='scala -Dscala.color'
+
 # Run mtr under sudo
 # alias mtr='sudo /usr/local/sbin/mtr' # Uncomment this line on Mac OS X
 
