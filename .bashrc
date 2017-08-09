@@ -46,6 +46,7 @@ alias ls='ls --color=auto' # Comment this line on Mac OS X
 alias ll='ls -lhaG'
 alias mkdir='mkdir -p'
 alias tmux='tmux attach || tmux new'
+alias vlc='nice -n 20 /Applications/VLC.app/Contents/MacOS/VLC &'
 
 # Colorized Scala REPL
 alias scala='scala -Dscala.color'
