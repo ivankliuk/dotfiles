@@ -54,9 +54,6 @@ alias scala='scala -Dscala.color'
 # Run mtr under sudo
 # alias mtr='sudo /usr/local/sbin/mtr' # Uncomment this line on Mac OS X
 
-# Quick jump to development environment
-alias ff='ssh fuel-fake'
-
 # List directories first
 alias a='ls -la | grep "^d" && ls -la | grep -v "^d"'
 
@@ -77,9 +74,6 @@ alias rm_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
 
 # PDB session capture when running py.test
 alias py.test='py.test --pdb --capture=no'
-
-# Docker initialization for Mac OS
-alias docker-init='bash --login /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh'
 
 ###########		
 # HISTORY #		
