@@ -96,3 +96,12 @@ export PROMPT_COMMAND="history -a"
 
 # Erase duplicate lines in the history and don't save commands starting with whitespace
 export HISTCONTROL=erasedups:ignorespace
+
+##################
+# GIT COMPLETION #
+##################
+
+# Needs `brew install git bash-completion`
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
