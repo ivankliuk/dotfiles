@@ -52,7 +52,7 @@ alias vlc='nice -n 20 /Applications/VLC.app/Contents/MacOS/VLC &'
 alias scala='scala -Dscala.color'
 
 # Run mtr under sudo
-# alias mtr='sudo /usr/local/sbin/mtr' # Uncomment this line on Mac OS X
+# alias mtr='PATH=/usr/local/sbin:$PATH sudo mtr' # Uncomment this line on Mac OS X
 
 # List directories first
 alias a='ls -la | grep "^d" && ls -la | grep -v "^d"'
