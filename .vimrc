@@ -204,6 +204,7 @@ Plugin 'majutsushi/tagbar'             " Code navigation bar
 Plugin 'nvie/vim-flake8'               " Flake8 check (needs flake8 package)
 Plugin 'kien/ctrlp.vim'                " File finder
 Plugin 'davidhalter/jedi-vim'          " Python autocompletion
+Plugin 'vmchale/dhall-vim'             " Syntax highlighting for Dhall
 
 call vundle#end()
 
