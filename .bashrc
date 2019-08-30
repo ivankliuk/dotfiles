@@ -75,6 +75,9 @@ alias rm_pyc='find . -name "*.pyc" -exec rm -rf {} \;'
 # PDB session capture when running py.test
 alias py.test='py.test --pdb --capture=no'
 
+# Find and format all Dhall files
+alias dhall_format="find . -name "*.dhall" -type f -exec sh -c 'dhall format < {} > {}.$$.tmp && mv {}.$$.tmp {}' \;"
+
 ###########		
 # HISTORY #		
 ###########
