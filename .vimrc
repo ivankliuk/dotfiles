@@ -12,6 +12,7 @@ set noswapfile                         " No swap files
 " set backupdir=~/vim_backup           " Backup directory
 set autoread                           " Watch for external file changes
 set history=1000                       " Set history size
+set clipboard=unnamed              " Use single clipboard for MacOS X
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                     Formatting

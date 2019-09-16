@@ -47,6 +47,7 @@ alias ll='ls -lhaG'
 alias mkdir='mkdir -p'
 alias tmux='tmux attach || tmux new'
 alias vlc='nice -n 20 /Applications/VLC.app/Contents/MacOS/VLC &'
+alias vim='/usr/local/bin/vim'
 
 # Colorized Scala REPL
 alias scala='scala -Dscala.color'
@@ -78,8 +79,8 @@ alias py.test='py.test --pdb --capture=no'
 # Find and format all Dhall files
 alias dhall_format="find . -name "*.dhall" -type f -exec sh -c 'dhall format < {} > {}.$$.tmp && mv {}.$$.tmp {}' \;"
 
-###########		
-# HISTORY #		
+###########
+# HISTORY #
 ###########
 
 # History size
