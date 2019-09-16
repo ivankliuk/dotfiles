@@ -12,7 +12,7 @@ set noswapfile                         " No swap files
 " set backupdir=~/vim_backup           " Backup directory
 set autoread                           " Watch for external file changes
 set history=1000                       " Set history size
-set clipboard=unnamed              " Use single clipboard for MacOS X
+set clipboard=unnamed                  " Use single clipboard for MacOS X
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                     Formatting
@@ -25,6 +25,7 @@ set textwidth=79
 set shiftwidth=4
 
 set tabstop=4                      " A hard TAB displays as 4 columns
+
 set expandtab                      " Insert spaces when hitting TABs
 set softtabstop=4                  " Insert/delete 4 spaces when hitting TAB/BS
 set shiftround                     " Round indent to multiple of 'shiftwidth'
@@ -134,10 +135,6 @@ let &colorcolumn=join(range(80,999),",")
 nmap <F1> :echo<CR>
 imap <F1> <C-o>:echo<CR>
 
-nmap <silent> <F2> :NERDTreeToggle<CR> " Toggle NERDTree window
-nmap <silent> <F3> :TagbarToggle<CR>   " Toggle TagBar window
-" Toggles paste mode (for pasting from browser)
-set pastetoggle=<F4>
 nmap <silent> <F5> :set spell!<CR>     " Toggle spell checking
 " <F7> calls PyFlake8
 map <F10> :q<CR>
@@ -148,34 +145,11 @@ inoremap , ,<SPACE>
 " / cleans previous search
 nnoremap / :nohl<CR>/
 
-" Remap semicolon to colon in normal mode (no need in use Shift key)
-nnoremap ; :
-
-" Tabs and buffers navigation
-map <silent><C-left> :tabprevious<CR>
-map <silent><C-right> :tabnext<CR>
-map <silent><C-up> :bprevious<CR>
-map <silent><C-down> :bnext<CR>
-
 let mapleader=","                      " Remap leader key
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                    Auto Commands
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" NERD Tree autorun
-" autocmd vimenter * NERDTree
-
-" Close vim if the only window left open is a NERDTree?
-autocmd bufenter *
-    \ if (winnr("$") == 1 &&
-        \ exists("b:NERDTreeType") &&
-        \ b:NERDTreeType == "primary") |
-    \ q |
-    \ endif
-
-" Flake8 autocheck on buffer write
-" autocmd BufWritePost *.py call Flake8()
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * call StripWhitespace()
@@ -191,41 +165,18 @@ set tags=./tags;
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                    Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vundle needs to be installed firstly:
-" $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-filetype off                           " Disable file type detection
+" vim-plug needs to be installed firstly:
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#begin()
+" Specify a directory for plugins
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/vundle'                 " Let Vundle manage Vundle
-Plugin 'scrooloose/nerdtree'           " NERD Tree plugin
-Plugin 'scrooloose/nerdcommenter'      " Commenting plugin
-Plugin 'majutsushi/tagbar'             " Code navigation bar
-Plugin 'nvie/vim-flake8'               " Flake8 check (needs flake8 package)
-Plugin 'kien/ctrlp.vim'                " File finder
-Plugin 'davidhalter/jedi-vim'          " Python autocompletion
-Plugin 'vmchale/dhall-vim'             " Syntax highlighting for Dhall
+Plug 'vmchale/dhall-vim'             " Syntax highlighting for Dhall
 
-call vundle#end()
-
-" Loading the indent file for specific file types
-filetype indent on
-filetype plugin on                     " Filetype detection
-
-" nerdtree config
-let g:NERDTreeShowHidden=1             " Show hidden files
-let NERDTreeIgnore=['\.pyc$']          " Don't show files with extentions
-
-" tagbar config
-let g:tagbar_hide_nonpublic = 1        " Shows private items
-
-" vim-flake8 config
-let g:flake8_show_in_gutter=1          " Show signs in the gutter
-
-" CtrlP config
-let g:ctrlp_map = '<C-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" Initialize plugin system
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                    Functions
