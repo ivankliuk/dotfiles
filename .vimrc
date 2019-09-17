@@ -100,12 +100,17 @@ set hlsearch                           " Highlight all search matches
 set incsearch                          " Live search
 set ignorecase                         " Ignore case in search patterns
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set spelllang=en_us
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                File browsing
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:netrw_banner=0                 " Remove useless banner
+let g:netrw_liststyle=3              " Enable tree view
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                Colors and themes
@@ -153,14 +158,6 @@ let mapleader=","                      " Remap leader key
 
 " Automatically removing all trailing whitespace
 autocmd BufWritePre * call StripWhitespace()
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                    Development
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Look tags up in current directory instead of VIM working one
-set tags=./tags;
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                    Plugins
