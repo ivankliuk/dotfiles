@@ -54,6 +54,7 @@ set termencoding=utf-8                 " Terminal encoding
 set encoding=utf-8                     " Default file encoding
 set shortmess+=I                       " Don't show :intro
 set number                             " Show line numbers
+set relativenumber                     " Show relative lines numbers
 " set ruler                            " Show the cursor position all the time
 set colorcolumn=80                     " Highlight 80 column
 set cursorline                         " Highlight line where cursor is
@@ -66,6 +67,7 @@ set splitright                         " Put the new window right of the current
 set list                               " Show invisible characters
 set listchars=tab:→→,trail:⋅,nbsp:␣,extends:❯,precedes:❮
 set showcmd                            " Show (partial) command in the last line of the screen
+set confirm                            " Raise a dialog window to save changed files
 
 if has('wildmenu')
   set wildmenu                         " Better VI command-line completion
@@ -183,4 +185,8 @@ function! StripWhitespace()
     :%s/\s\+$//e
 endfunction
 
+
+function! FormatJson()
+    :%!python -m json.tool
+endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
