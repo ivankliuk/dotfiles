@@ -78,7 +78,7 @@ HIST_STAMPS="%d-%b-%Y"
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Custom aliases
-source .zsh_aliases
+source ~/.zsh_aliases
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -99,6 +99,7 @@ plugins=(
   scala
   sudo
   tmux
+  zsh-navigation-tools
   z
 )
 
