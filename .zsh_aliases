@@ -1,1 +1,2 @@
 alias usage='du -sh -- * | sort -hr'
+alias vim='/usr/local/bin/vim'
