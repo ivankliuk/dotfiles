@@ -1,3 +1,14 @@
+rebase_on() {
+  TARGET_BRANCH=$1
+  CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+  echo
+  echo " * Rebasing $CURRENT_BRANCH on $TARGET_BRANCH"
+  echo
+  git checkout $TARGET_BRANCH
+  git pull
+  git checkout $CURRENT_BRANCH
+  git rebase $TARGET_BRANCH
+}
+
 alias usage='du -sh -- * | sort -hr'
-alias master_rebase='CURRENT_BRANCH=$(git symbolic-ref --short -q HEAD) && git checkout master && git pull && git checkout $CURRENT_BRANCH && git rebase master'
 alias mtr='sudo mtr'
