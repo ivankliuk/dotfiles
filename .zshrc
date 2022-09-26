@@ -138,3 +138,8 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # SDKMAN
 # Installation instructions https://sdkman.io/install
 source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# PyEnv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
