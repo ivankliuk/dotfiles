@@ -10,5 +10,9 @@ rebase_on() {
   git rebase $TARGET_BRANCH
 }
 
+alias gca='git commit -a --amend --no-edit'
+alias glt='git log --oneline --decorate --graph --all'
+alias glta='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --all'
+
 alias usage='du -sh -- * | sort -hr'
 alias mtr='sudo mtr'
