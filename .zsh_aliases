@@ -16,3 +16,4 @@ alias glta='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %C
 
 alias usage='du -sh -- * | sort -hr'
 alias mtr='sudo mtr'
+alias mkvenv='python -m venv venv && source venv/bin/activate'
